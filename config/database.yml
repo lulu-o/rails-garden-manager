@@ -78,8 +78,6 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
+  production:
   <<: *default
-  database: rails-garden-manager_production
-  username: rails-garden-manager_production
-  password: <%= ENV['rails-garden-manager_DATABASE_PASSWORD'] %>
+  url: <%= ENV['POSTGRESQL_ADDON_URI'] %>
